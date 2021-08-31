@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.dumin.MainController">
+   <ListView fx:id="listViewServerFiles" layoutX="311.0" layoutY="115.0" prefHeight="320.0" prefWidth="272.0" />
+   <ListView fx:id="listViewUserFiles" layoutX="16.0" layoutY="115.0" prefHeight="320.0" prefWidth="272.0" />
+   <Button fx:id="btnOpenServiceDir" disable="true" layoutX="322.0" layoutY="14.0" mnemonicParsing="false" onAction="#openDirectoryServer" text="Открыть" />
+   <Button fx:id="btnDownloadFromServer" layoutX="462.0" layoutY="14.0" mnemonicParsing="false" onAction="#downloadFile" text="Скачать" />
+   <Button fx:id="btnInfoFileFromServer" layoutX="535.0" layoutY="14.0" mnemonicParsing="false" onAction="#infoFileServer" text="Инфо" />
+   <Button fx:id="btnOpenUserDir" disable="true" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#openDirectoryUser" text="Открыть" />
+   <Button fx:id="btnUploadFileFromUser" layoutX="159.0" layoutY="14.0" mnemonicParsing="false" onAction="#uploadFile" text="Загрузить" />
+   <Button fx:id="btnInfoFileFromUser" layoutX="239.0" layoutY="14.0" mnemonicParsing="false" onAction="#infoFileUser" text="Инфо" />
+   <Button fx:id="btnBackServer" layoutX="404.0" layoutY="15.0" mnemonicParsing="false" onAction="#backServer" prefHeight="24.0" prefWidth="49.0">
+      <graphic>
+         <ImageView fitHeight="15.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../image/arrow-up.png" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <Button fx:id="btnBackUser" layoutX="93.0" layoutY="14.0" mnemonicParsing="false" onAction="#backUser" prefHeight="25.0" prefWidth="49.0">
+      <graphic>
+         <ImageView fitHeight="15.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../image/arrow-up.png" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <Line endX="-3.0" endY="400.0" layoutX="303.0" layoutY="47.0" startX="-2.0" startY="-47.0" />
+   <Label layoutX="323.0" layoutY="98.0" text="Server Files" />
+   <Label layoutX="14.0" layoutY="98.0" text="User Files" />
+   <ComboBox fx:id="comboBoxNameDisk" layoutX="16.0" layoutY="54.0" onAction="#goToDisk" prefHeight="25.0" prefWidth="98.0" />
+   <Label fx:id="labelCurUser" layoutX="89.0" layoutY="98.0" text="Label" />
+   <Button fx:id="btnDeleteUserFile" layoutX="227.0" layoutY="54.0" mnemonicParsing="false" onAction="#deleteFileUser" text="Удалить" />
+   <Button fx:id="btnDeleteServerFile" layoutX="522.0" layoutY="54.0" mnemonicParsing="false" onAction="#deleteFileServer" text="Удалить" />
+   <Label fx:id="labelCurServer" layoutX="401.0" layoutY="98.0" text="Label" />
+</AnchorPane>
